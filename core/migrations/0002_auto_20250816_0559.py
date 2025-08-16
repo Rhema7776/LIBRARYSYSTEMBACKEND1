@@ -6,9 +6,9 @@ from django.contrib.auth.hashers import make_password
 def create_superuser(apps, schema_editor):
     User = apps.get_model('users', 'User')
     User.objects.create(
-        username='admin',
-        email='admin@example.com',
-        password=make_password('admin123'),
+        username='Rhema',
+        email='rhemachukwumah7@gmail.com.com',
+        password=make_password('rhema7'),
         is_superuser=True,
         is_staff=True,
     )
