@@ -46,6 +46,18 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+
+
+CORS_ALLOWED_ORIGINS = [
+    "https://librarysystemfrontend-1.vercel.app",  # Vercel frontend
+    "http://localhost:3000",                       # Local React dev server
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://librarysystemfrontend-1.vercel.app",
+    "https://librarysystembackend1-1.onrender.com",
+]
+
 ROOT_URLCONF = "library_system.urls"
 
 TEMPLATES = [
