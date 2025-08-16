@@ -47,6 +47,7 @@ MIDDLEWARE = [
 ]
 
 
+CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOWED_ORIGINS = [
     "https://librarysystemfrontend-1.vercel.app",  # Vercel frontend
@@ -56,6 +57,12 @@ CORS_ALLOWED_ORIGINS = [
 CSRF_TRUSTED_ORIGINS = [
     "https://librarysystemfrontend-1.vercel.app",
     "https://librarysystembackend1-1.onrender.com",
+]
+
+CORS_ALLOW_HEADERS = [
+    "content-type",
+    "authorization",
+    "x-csrftoken",
 ]
 
 ROOT_URLCONF = "library_system.urls"
