@@ -10,6 +10,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret-key")  # ✅ keep secret in pro
 DEBUG = os.getenv("DEBUG", "True") == "True"
 
 ALLOWED_HOSTS = [
+    "https://librarysystemfrontend-1.vercel.app",
     "library-system-kgbc.onrender.com",  # Render host
     "localhost",
     "127.0.0.1",
