@@ -11,7 +11,9 @@ DEBUG = os.getenv("DEBUG", "True") == "True"
 
 ALLOWED_HOSTS = [
     "https://librarysystemfrontend-1.vercel.app",
+    "https://librarysystembackend1-1.onrender.com", # Render host
     "library-system-kgbc.onrender.com",  # Render host
+    ".onrender.com",
     "localhost",
     "127.0.0.1",
 ]
