@@ -35,6 +35,21 @@ INSTALLED_APPS = [
     "core",
 ]
 
+
+REST_FRAMEWORK = {
+    
+    'DEFAULT_FILTER_BACKENDS': ['rest_framework.filters.SearchFilter'],
+
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        # 'rest_framework.permissions.AllowAny',  # Update this later for security
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
+
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -52,10 +67,9 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
-
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+    "ACCESS_TOKEN_LIFETIME": timedelta(hours=1),   # or even days for dev
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
 }
 
 CORS_ALLOW_CREDENTIALS = True
